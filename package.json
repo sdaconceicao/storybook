@@ -1,0 +1,23 @@
+{
+  "name": "storybook",
+  "version": "1.0.0",
+  "description": "A companion to a tech talk I'm giving about storybook",
+  "scripts": {
+    "start": "start-storybook"
+  },
+  "author": "Stephen da Conceicao",
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.3.6",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-controls": "^6.3.6",
+    "@storybook/addon-docs": "^6.3.6",
+    "@storybook/addons": "^6.3.6",
+    "@storybook/react": "^6.3.6",
+    "@storybook/theming": "^6.3.6"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-jss": "^10.7.1"
+  }
+}

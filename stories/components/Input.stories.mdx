@@ -1,0 +1,48 @@
+import { Meta, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+import { Input } from '../../src/index'; import {Preview} from '@storybook/addon-docs';
+
+<Meta
+  title="Input"
+  parameters={{
+    viewMode: 'docs',
+    docs: {
+      source: {
+        type: 'code'
+      }
+    }
+  }}
+  argTypes={{ onChange: { action: 'onChange' } }}
+  component={Input}
+/>
+
+## Inputs
+
+An input is a basic html form element.
+
+<Story name="Basic Usage">
+  {args => {
+    const [value, setValue] = useState(args.value);
+    const handleChange = (e) => {
+      setValue(e.target.value);
+    };
+  return (
+    <Input
+      htmlId="example"
+      name="example"
+      onChange={(e)=>handleChange('onChange', e)}
+      value={value}
+      {...args}
+    />
+  )}}
+</Story>
+
+<ArgsTable story="Basic Usage" />
+
+### Inline
+
+<Preview>
+  <Story name="Inline">
+    <Input id="inline" name="inline" inline />
+  </Story>
+</Preview>
