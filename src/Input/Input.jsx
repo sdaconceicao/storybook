@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import useStyles from './Input.styles';
 
 const Input = ({
-  id,
   className,
   ...props
 }) => {
@@ -25,13 +24,15 @@ Input.propTypes = {
   /** Boolean to indicate whether or not you want the standard inline layout */
   inline: PropTypes.bool,
   /** onChange function */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  /** Boolean to indicate input is enabled */
+  disabled: PropTypes.bool,
 };
 
 Input.defaultProps = {
   className: '',
-  inputClass: '',
-  inline: false
+  inline: false,
+  disabled: false
 };
 
 export default Input;

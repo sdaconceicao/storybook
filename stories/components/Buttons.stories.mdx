@@ -1,0 +1,40 @@
+import { Meta, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Button } from '../../src/index';
+
+<Meta
+  title="Components/Buttons"
+  parameters={{
+    viewMode: 'docs',
+    docs: {
+      source: {
+        type: 'code'
+      }
+    }
+  }}
+  argTypes={{
+    children: {
+      control: { type: 'text' }
+    },
+    size: {
+      control: { type: 'select' }
+    }
+  }}
+  component={Button}
+/>
+
+## Buttons
+
+Buttons are interactive elements on a page
+
+<Story name="Basic Usage">
+  {args => (
+    <Button
+      htmlId="example"
+      name="example"
+      {...args}
+    >{args.children || 'Click Me'}</Button>
+  )}}
+</Story>
+
+<ArgsTable story="Basic Usage" />
+

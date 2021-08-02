@@ -8,6 +8,16 @@ export const parameters = {
   controls: {
     expanded: true,
     hideNoControlsWarning: true
+  },
+  a11y: {
+    config: {
+      rules: [
+        {
+          id: 'autocomplete-valid',
+          enabled: false
+        }
+      ]
+    }
   }
 };
 
@@ -15,9 +25,6 @@ const useStyles = createUseStyles({
   '@global': {
     html: {
       boxSizing: 'border-box',
-    },
-    '.sb-show-main.sb-main-padded': {
-      padding: 0
     },
     '*': {
       boxSizing: 'inherit'

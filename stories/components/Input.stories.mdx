@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Input } from '../../src/index'; import {Preview} from '@storybook/addon-docs';
 
 <Meta
-  title="Input"
+  title="Components/Input"
   parameters={{
     viewMode: 'docs',
     docs: {
@@ -12,7 +12,6 @@ import { Input } from '../../src/index'; import {Preview} from '@storybook/addon
       }
     }
   }}
-  argTypes={{ onChange: { action: 'onChange' } }}
   component={Input}
 />
 
@@ -30,8 +29,9 @@ An input is a basic html form element.
     <Input
       htmlId="example"
       name="example"
-      onChange={(e)=>handleChange('onChange', e)}
       value={value}
+      onChange={(e)=>handleChange('onChange', e)}
+      aria-label={"Example"}
       {...args}
     />
   )}}
@@ -41,8 +41,10 @@ An input is a basic html form element.
 
 ### Inline
 
+Inputs can also be display inline.
+
 <Preview>
   <Story name="Inline">
-    <Input id="inline" name="inline" inline />
+    <Input id="inline" name="inline" aria-label={"Inline"} inline />
   </Story>
 </Preview>
