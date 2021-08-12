@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "A companion to a tech talk I'm giving about storybook",
   "scripts": {
-    "start": "start-storybook"
+    "start": "start-storybook",
+    "test": "jest src"
   },
   "author": "Stephen da Conceicao",
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
     "@storybook/addon-a11y": "^6.3.6",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-controls": "^6.3.6",
@@ -15,7 +19,9 @@
     "@storybook/react": "^6.3.6",
     "@storybook/testing-react": "0.0.21",
     "@storybook/theming": "^6.3.6",
-    "@testing-library/react": "^12.0.0"
+    "@testing-library/react": "^12.0.0",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6"
   },
   "dependencies": {
     "react": "^17.0.2",
