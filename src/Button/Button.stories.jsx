@@ -7,7 +7,20 @@ import '../theme';
 
 export default {
   title: 'components/Button',
-  component: Button
+  component: Button,
+  argTypes: {
+    children: {
+      control: { type: 'text' }
+    },
+    size: {
+      control: { type: 'select' }
+    },
+    className: {
+      table:{
+        disable: true
+      }
+    }
+  }
 }
 
 export const BasicUsage = (args) => <Button {...args}>Lorem</Button>
@@ -19,6 +32,7 @@ Tertiary.parameters = {
     page: (args) => (
       <ThemeProvider theme={theme}>
         <Title>Custom Doc Page</Title>
+        <p>This is a tertiary button</p>
         <Tertiary {...args}>Lorem</Tertiary>
         <ArgsTable />
       </ThemeProvider>
