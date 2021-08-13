@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss'
 
-export default createUseStyles({
+export default createUseStyles( theme => ({
   root: {
     margin: 10,
     padding: 10,
@@ -14,6 +14,17 @@ export default createUseStyles({
     '&:focus': {
       outlineColor: 'blue'
     }
+  },
+  primary: {
+    backgroundColor: theme.colorPrimary.bg,
+    color: theme.colorPrimary.text
+  },
+  secondary: {
+    backgroundColor: theme.colorSecondary.bg,
+    color: theme.colorSecondary.text
+  },
+  tertiary: {
+    backgroundColor: theme.colorTertiary.bg,
+    color: theme.colorTertiary.text
   }
-
-})
+}));

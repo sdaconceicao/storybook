@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { createUseStyles, ThemeProvider } from 'react-jss';
+import theme from '../src/theme';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -35,7 +36,7 @@ const useStyles = createUseStyles({
 const withThemeProvider = (Story, context) => {
   const classes = useStyles();
   return (
-    <ThemeProvider >
+    <ThemeProvider theme={theme}>
       <Story classes={classes} {...context} />
     </ThemeProvider>
   );
