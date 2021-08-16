@@ -3,8 +3,8 @@ import { createUseStyles } from 'react-jss'
 export default createUseStyles({
   input: {
     height: 16,
-    width: ({inline}) => inline ? '100%' : 'inherit',
-    display: ({inline}) => inline ? 'block' : 'inline-block',
+    width: ({inline}) => inline ? 'inherit' : '100%',
+    display: ({inline}) => inline ? 'inline-block' : 'block',
     borderRadius: 5,
     margin: 10,
     padding: 10,

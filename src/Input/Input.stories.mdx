@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import { useState } from 'react';
 import { Input } from '../../src/index';
 
@@ -56,5 +56,20 @@ Inputs can also be display inline.
 <Preview>
   <Story name="Inline">
     <Input id="inline" name="inline" inline />
+  </Story>
+</Preview>
+
+### Multiple stories with Preview
+
+You can group stories together into a single canvas view within a single Preview
+
+<Preview>
+  <Story name="Preview Story 1">
+    <label htmlFor="canvas1">Preview 1</label>
+    <Input id="canvas1" name="canvas1" />
+  </Story>
+  <Story name="Preview Story 2">
+    <label html>Preview 2</label>
+    <Input id="canvas2" name="canvas2" />
   </Story>
 </Preview>

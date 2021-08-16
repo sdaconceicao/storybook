@@ -19,7 +19,18 @@ export const Form = () => {
   )}
 
 export default {
-  component: Form, title: 'components/Forms'
+  component: Form,
+  title: 'components/Forms',
+  parameters: {
+    docs: {
+      page: null
+    },
+    previewTabs: {
+      'storybook/docs/panel': {
+        hidden: true,
+      },
+    }
+  }
 }
 
 
