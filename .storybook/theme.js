@@ -1,14 +1,15 @@
 import { create } from '@storybook/theming';
+import logo from './logo.png';
 
 export default create({
-  base: 'light',
+  base: 'dark',
 
   colorPrimary: 'red',
   colorSecondary: 'deepskyblue',
 
   // UI
   appBg: 'grey',
-  appContentBg: 'silver',
+  appContentBg: 'lightgray',
   appBorderColor: 'grey',
   appBorderRadius: 4,
 
@@ -31,5 +32,7 @@ export default create({
   inputTextColor: 'black',
   inputBorderRadius: 4,
 
-  brandTitle: 'A Demo Storybook'
+  brandTitle: 'A Demo Storybook',
+  brandImage: logo,
+  brandUrl: 'https://www.nhl.com/penguins'
 });
