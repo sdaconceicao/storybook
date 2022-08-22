@@ -1,6 +1,5 @@
-
 {
   "fixturesFolder": false,
-  "testFiles": "**/*.e2e.jsx",
+  "testFiles": "**/*.int.jsx",
   "componentFolder": "src"
 }
